@@ -190,7 +190,7 @@ public abstract class GOAP_Agent : MonoBehaviour
 				action = currentActions.Peek();
 				bool inRange = action.RequiresInRange() ? action.isInRange : true;
 
-				if (inRange)
+				if (inRange /* action.CanBePerformed(gameObj) */)
 				{
 					// we are in range, so perform the action
 					bool success = action.Perform(gameObj);

@@ -126,6 +126,7 @@ public abstract class GOAP_Agent : MonoBehaviour
 			// move the game object
 
 			GOAP_Action action = currentActions.Peek();
+
 			if (action.RequiresInRange() && action.target == null)
 			{
 				Debug.Log("<color=red>Fatal error:</color> Action requires a target but has none. Planning failed. You did not assign the target in your Action.checkProceduralPrecondition()");
